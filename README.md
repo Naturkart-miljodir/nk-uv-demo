@@ -2,60 +2,57 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![TestPyPI](https://img.shields.io/badge/TestPyPI-latest-blue)](https://test.pypi.org/project/nk_uv_demo/) [![Coverage](https://codecov.io/gh/naturkart-miljodir/nk_uv_demo/branch/main/graph/badge.svg)](https://codecov.io/gh/naturkart-miljodir/nk_uv_demo) [![Safety](https://img.shields.io/badge/Safety-Dashboard-blue)](https://platform.safetycli.com/codebases/nk_uv_demo/findings)
 
-A Python project built with UV
+A demo repository showcasing Python project development and packaging best practices using [uv](https://docs.astral.sh/uv/getting-started/installation/). This project demonstrates project structure, dependency management, containerization with Docker and automated code quality, security scanning and deployment workflows using GitHub Actions (GHA).
 
-**Table of Contents**
+**Table of Contents:**
 
 - [Project Overview](#project-overview)
-  - [Key Features](#key-features)
-  - [Repository Structure](#repository-structure)
-- [Docker Configuration](#docker-configuration)
-- [Workflow Statuses](#workflow-statuses)
 - [Getting Started](#getting-started)
-  - [Installation](#installation)
 - [Development](#development)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
 - [Development Workflow](#development-workflow)
-  - [Code Quality Standards](#code-quality-standards)
-  - [GHA Workflows](#gha-workflows)
-  - [Local Development Commands](#local-development-commands)
-  - [Branch Protection](#branch-protection)
 - [Documentation](#documentation)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
 ## Project Overview
 
-This Python package is developed using [uv](https://docs.astral.sh/uv/) and is maintained by Willeke A'Campo. It provides a python project built with uv and is intended for development and production use.
+This repository serves as a demonstration and learning resource. To use this as a template for new projects, refer to the [setup guide](./docs/setup-guide.md) in the documentation.
 
 ### Key Features
+<!-- List key features and capabilities -->
 
-- Core functionality for a python project built with uv
-- Reproducible environments: Docker containers and uv environment management for consistent package versions across development, testing, and production
-- Quality assurance: Automated code quality checks, testing and security scanning via GitHub Actions workflows
-- Development tools: VS Code integration, development containers, Taskfile automation
+- **Python packaging**:
+  - Dependency management with uv
+  - Automated versioning using setuptools-scm
+- **GHA** workflows for CI/CD and security:
+  - Code quality checks with pre-commit, ruff, mypy, and pytest
+  - Security scans with Safety, CodeQL, Dependabot, and Zizmor
+  - Python package deployment to Test PyPI
+  - Container image deployment to GitHub Container Registry
+- **Developer tools**: VS Code integration, development containers, Taskfile automation
 
 ### Repository Structure
+<!-- Directory layout -->
 
-Important configuration files are listed below, full overview of the repository structure is available in the [Repository Structure](./docs/repo-structure.md) documentation.
+Important configurations files are listed below, full overview of the repository structure is available in the [Repository Structure](./docs/repo-structure.md) documentation.
 
 | File/Directory            | Purpose                             |
 |---------------------------|-------------------------------------|
 | `.devcontainer/`          | VS Code dev container configuration |
-| `.github/workflows/`      | GitHub Actions for CI/CD (see [GitHub Actions Workflows](#github-actions-workflows)) |
+| `.github/workflows/`      | GitHub Actions for CI/CD (see [GitHub Actions Workflows](#github-actions-workflows)).|
 | `pyproject.toml`          | Python package configuration, dependencies, and build settings |
-| `Taskfile.yml`            | Automated tasks for setting up the dev environment, running code quality checks and more. Run `task help` to see all available tasks or refer to the [Command Cheatsheet](./docs/command-cheatsheet.md) |
+| `Taskfile.yml`    | Automated tasks for setting up the dev environment, running code quality checks and more. Run `task help` to see all available tasks or refer to the [Command Cheatsheet](./docs/command-cheatsheet.md). |
 
-## Docker Configuration
+### Docker Configuration
+<!-- Add only if applicable -->
 
 This project includes multiple Docker configurations to support development, testing and deployment:
 
 - **Development Container**: Configured via `.devcontainer/devcontainer.json` for use with VS Code Dev Containers and GitHub Codespaces
 - **Testing Container**: Docker Compose setup for local testing that reproduces the production environment. Start with `docker-compose up --build`
-- **Production Container**: [Dockerfile](./Dockerfile) for building production-ready container images, automatically deployed to GitHub Container Registry (GHCR) via GitHub Actions workflow: [./.github/workflows/cd-docker.yml](./.github/workflows/cd-docker.yml)
+- **Production Container**: [Dockerfile](./Dockerfile) for building production-ready container images, automatically deployed to GitHub Container Registry (GHCR) via GitHub Actions workflow: [./github/workflows/cd-docker.yml](./.github/workflows/cd-docker.yml)
 
-For detailed development container configuration and customization instructions, see the [setup guide](./docs/setup-guide.md).
+For detailed development container configuration and customization instructiosn, see the[setup-guide](./docs/setup-guide.md).
 
 ### Workflow Statuses
 
@@ -74,7 +71,7 @@ Results of the security scans are visible in the [Security](https://github.com/n
 
 ## Getting Started
 
-The **nk-uv-demo** package provides a python project built with uv. You can install this package from [Test PyPI](https://test.pypi.org/project/nk-uv-demo/) or pull the containerized version from [GHCR](https://github.com/naturkart-miljodir/nk-uv-demo/pkgs/container/nk-uv-demo).
+The **nk-uv-demo** package is a minimal package with a single function that prints the package name. You can install this package from [Test PyPI](https://test.pypi.org/project/nk-uv-demo/) or pull the containerized version from [GHCR](https://github.com/miljodir-naturkart/nk-uv-demo/pkgs/container/uv-demo). The main purpose of this repository is to explore development tools and observe the CI/CD pipeline in action. To get started, follow the steps in the [Development Workflow](#development-workflow) section..
 
 ### Installation
 
@@ -111,13 +108,11 @@ docker run --rm ghcr.io/naturkart-miljodir/nk-uv-demo:latest
 
 The following steps configure your development environment using VS Code Dev Containers. For local setup without containers, refer to the [setup guide](./docs/setup-guide.md) in the documentation.
 
-
 ### Prerequisites
 
 - [Docker](https://docs.docker.com/engine/install/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) extension
-
 
 ### Setup
 
@@ -131,7 +126,6 @@ The following steps configure your development environment using VS Code Dev Con
    - Sets up the Python environment with dependencies in `.venv` via `task dev-setup`, which runs `uv sync --dev` and executes code quality checks and test coverage
 
 4. **Test the installation with Task commands**:
-
 
    Task is used to automate common development tasks *(see [Taskfile.yml](Taskfile.yml))*.
 
@@ -153,19 +147,17 @@ The following steps configure your development environment using VS Code Dev Con
 
 5. **Test the notebook**: Open `notebooks/demo.ipynb` and select the `.venv` kernel. If you have problems activating the `.venv` refer to the [setup guide](./docs/setup-guide.md).
 
-
 6. **Configure the GitHub Repository**: If you fork this repository or use it to create a new repository from scratch, you'll need to configure your GitHub repository to connect with **Test PyPI**, **Safety** and **Code Coverage**. Also, verify that your **security scans** are properly set up. See the **GitHub Repository Configuration** section in the [setup guide](./docs/setup-guide.md) for instructions.
 
 ## Development Workflow
 
 1. **Setup**:
-- Follow the setup instructions above or refer to the [Installation Guide](docs/installation.md).
+   - Follow the setup instructions above or refer to the [Installation Guide](docs/installation.md).
    - Follow the demo walkthrough in the [Quick Start Guide](docs/demo-quickstart.md)
-
 
 2. **Develop**:
     - Create a branch for your feature or bug fix: `feat/<name>` or `fix/<name>`.
-    - Make your changes. For example develop package functions in `src/` or add notebooks to `notebooks/`.
+    - Make your changes.For example develop package functions in `src/` or add notebooks to `notebooks/`.
     - Ensure code meets the quality standards by running `task check`.
     - Ensure tests are written for new features and pass `task test`.
 
@@ -180,8 +172,7 @@ The following steps configure your development environment using VS Code Dev Con
     - Create a PR from `release/<version>` to `main` to deploy the new release.
     - Once merged to `main`, the CD workflows are triggered:
         - CD Python automatically builds and publishes the package to Test PyPI.
-- CD Docker builds and pushes the container image to GitHub Container Registry.
-
+        - CD Docker builds and pushes the container image to GitHub Container Registry.
 
 5. **Clean up**:
    - Clean up dev files and artifacts with `task clean`.
@@ -237,7 +228,6 @@ task tag              # Prepare a new release (create git tag)
 
 For more commands see: [Command Cheatsheet](./docs/command-cheatsheet.md)
 
-
 ### Branch Protection
 
 The `main` branch is protected with the following rules:
@@ -254,8 +244,6 @@ The `main` branch is protected with the following rules:
 - [Command Cheatsheet](./docs/command-cheatsheet.md)
 - [Repository Structure](./docs/repo-structure.md)
 - [Troubleshooting Guide](./docs/troubleshooting.md)
-
-
 
 ## Acknowledgements
 
