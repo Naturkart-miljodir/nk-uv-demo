@@ -58,13 +58,13 @@ For detailed development container configuration and customization instructiosn,
 
 | Job | Status | Description |
 |---|---|---|
-| **CI Python** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/ci-python.yml?branch=main&label=&style=flat) | Code quality checks, testing, coverage |
-| **CD Python** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/cd-python.yml?label=&style=flat) | Package deployment to Test PyPI |
-| **CI Docker** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/ci-docker.yml?branch=main&label=&style=flat) | Build and test Docker image |
-| **CD Docker** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/cd-docker.yml?label=&style=flat) | Container deployment to GitHub Registry |
-| **Security Scan - Safety** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/scan-safety.yml?branch=main&label=&style=flat) | Python dependency vulnerability scanning |
-| **Security Scan - CodeQL** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/scan-codeql.yml?branch=main&label=&style=flat) | Python and GHA security analysis |
-| **Security Scan - Zizmor** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/scan-zizmor.yml?branch=main&label=&style=flat) | GHA workflow security scan |
+| **CI Python** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/ci-python.yml?branch=main&label=&style=flat) | Code quality checks, testing, coverage |
+| **CD Python** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/cd-python.yml?label=&style=flat) | Package deployment to Test PyPI |
+| **CI Docker** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/ci-docker.yml?branch=main&label=&style=flat) | Build and test Docker image |
+| **CD Docker** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/cd-docker.yml?label=&style=flat) | Container deployment to GitHub Registry |
+| **Security Scan - Safety** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/scan-safety.yml?branch=main&label=&style=flat) | Python dependency vulnerability scanning |
+| **Security Scan - CodeQL** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/scan-codeql.yml?branch=main&label=&style=flat) | Python and GHA security analysis |
+| **Security Scan - Zizmor** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/scan-zizmor.yml?branch=main&label=&style=flat) | GHA workflow security scan |
 | **Dependabot** |  | Automated dependency updates |
 
 Results of the security scans are visible in the [Security](https://github.com/naturkart-miljodir/nk-uv-demo/security/code-scanning) tab of the GitHub repository.
