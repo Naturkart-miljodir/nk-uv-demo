@@ -4,7 +4,7 @@
 
 | Description | Command |
 |-------------|---------|
-| Clone repository | `gh repo clone ac-willeke/Naturkart uv demo` |
+| Clone repository | `gh repo clone naturkart-miljodir/Naturkart uv demo` |
 | Navigate to directory | `cd Naturkart uv demo` |
 | Complete development setup | `task dev-setup` |
 | Install dependencies only | `uv sync` |

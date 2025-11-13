@@ -2,7 +2,7 @@
 # (improved build time and ensures consistency)
 # NOTE: you must first publish the image to GitHub Container Registry and the update 
 # the path in the docker-compose.yml file accordingly.
-FROM ghcr.io/ac-willeke/nk_uv_demo:latest
+FROM ghcr.io/naturkart-miljodir/nk_uv_demo:latest
 
 # Dev-only customizations can go here if needed
 # Note: Git and other dev tools are installed via devcontainer features

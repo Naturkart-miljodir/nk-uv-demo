@@ -1,6 +1,6 @@
 # Naturkart uv demo
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![TestPyPI](https://img.shields.io/badge/TestPyPI-latest-blue)](https://test.pypi.org/project/nk_uv_demo/) [![Coverage](https://codecov.io/gh/ac-willeke/nk_uv_demo/branch/main/graph/badge.svg)](https://codecov.io/gh/ac-willeke/nk_uv_demo) [![Safety](https://img.shields.io/badge/Safety-Dashboard-blue)](https://platform.safetycli.com/codebases/nk_uv_demo/findings)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![TestPyPI](https://img.shields.io/badge/TestPyPI-latest-blue)](https://test.pypi.org/project/nk_uv_demo/) [![Coverage](https://codecov.io/gh/naturkart-miljodir/nk_uv_demo/branch/main/graph/badge.svg)](https://codecov.io/gh/naturkart-miljodir/nk_uv_demo) [![Safety](https://img.shields.io/badge/Safety-Dashboard-blue)](https://platform.safetycli.com/codebases/nk_uv_demo/findings)
 
 A Python project built with UV
 
@@ -61,20 +61,20 @@ For detailed development container configuration and customization instructions,
 
 | Job | Status | Description |
 |---|---|---|
-| **CI Python** | ![Status](https://img.shields.io/github/actions/workflow/status/ac-willeke/nk_uv_demo/ci-python.yml?branch=main&label=&style=flat) | Code quality checks, testing, coverage |
-| **CD Python** | ![Status](https://img.shields.io/github/actions/workflow/status/ac-willeke/nk_uv_demo/cd-python.yml?label=&style=flat) | Package deployment to Test PyPI |
-| **CI Docker** | ![Status](https://img.shields.io/github/actions/workflow/status/ac-willeke/nk_uv_demo/ci-docker.yml?branch=main&label=&style=flat) | Build and test Docker image |
-| **CD Docker** | ![Status](https://img.shields.io/github/actions/workflow/status/ac-willeke/nk_uv_demo/cd-docker.yml?label=&style=flat) | Container deployment to GitHub Registry |
-| **Security Scan - Safety** | ![Status](https://img.shields.io/github/actions/workflow/status/ac-willeke/nk_uv_demo/scan-safety.yml?branch=main&label=&style=flat) | Python dependency vulnerability scanning |
-| **Security Scan - CodeQL** | ![Status](https://img.shields.io/github/actions/workflow/status/ac-willeke/nk_uv_demo/scan-codeql.yml?branch=main&label=&style=flat) | Python and GHA security analysis |
-| **Security Scan - Zizmor** | ![Status](https://img.shields.io/github/actions/workflow/status/ac-willeke/nk_uv_demo/scan-zizmor.yml?branch=main&label=&style=flat) | GHA workflow security scan |
+| **CI Python** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/ci-python.yml?branch=main&label=&style=flat) | Code quality checks, testing, coverage |
+| **CD Python** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/cd-python.yml?label=&style=flat) | Package deployment to Test PyPI |
+| **CI Docker** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/ci-docker.yml?branch=main&label=&style=flat) | Build and test Docker image |
+| **CD Docker** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/cd-docker.yml?label=&style=flat) | Container deployment to GitHub Registry |
+| **Security Scan - Safety** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/scan-safety.yml?branch=main&label=&style=flat) | Python dependency vulnerability scanning |
+| **Security Scan - CodeQL** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/scan-codeql.yml?branch=main&label=&style=flat) | Python and GHA security analysis |
+| **Security Scan - Zizmor** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk_uv_demo/scan-zizmor.yml?branch=main&label=&style=flat) | GHA workflow security scan |
 | **Dependabot** |  | Automated dependency updates |
 
-Results of the security scans are visible in the [Security](https://github.com/ac-willeke/nk-uv-demo/security/code-scanning) tab of the GitHub repository.
+Results of the security scans are visible in the [Security](https://github.com/naturkart-miljodir/nk-uv-demo/security/code-scanning) tab of the GitHub repository.
 
 ## Getting Started
 
-The **nk-uv-demo** package provides a python project built with uv. You can install this package from [Test PyPI](https://test.pypi.org/project/nk-uv-demo/) or pull the containerized version from [GHCR](https://github.com/ac-willeke/nk-uv-demo/pkgs/container/nk-uv-demo).
+The **nk-uv-demo** package provides a python project built with uv. You can install this package from [Test PyPI](https://test.pypi.org/project/nk-uv-demo/) or pull the containerized version from [GHCR](https://github.com/naturkart-miljodir/nk-uv-demo/pkgs/container/nk-uv-demo).
 
 ### Installation
 
@@ -97,9 +97,9 @@ nk_uv_demo.main()
 Or pull and run the container:
 
 ```bash
-docker pull ghcr.io/ac-willeke/nk-uv-demo:latest
+docker pull ghcr.io/naturkart-miljodir/nk-uv-demo:latest
 
-docker run --rm ghcr.io/ac-willeke/nk-uv-demo:latest
+docker run --rm ghcr.io/naturkart-miljodir/nk-uv-demo:latest
 # > Hello from nk-uv-demo!
 # > Version: x.x.x
 ```
@@ -262,7 +262,7 @@ The `main` branch is protected with the following rules:
 This project incorporates best practices from the Python and DevOps communities, including:
 
 - Astral-sh's [uv Documentation](https://docs.astral.sh/uv/) and Docker configuration example [astral-sh/uv-docker-example](https://github.com/astral-sh/uv-docker-example)
-- GitHub Template: [uv-template](https://github.com/ac-willeke/uv-template)
+- GitHub Template: [uv-template](https://github.com/naturkart-miljodir/uv-template)
 
 ## License
 

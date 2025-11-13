@@ -29,11 +29,11 @@ This guide will walk you through setting up the **Naturkart uv demo** project on
 
 ```bash
 # Clone from GitHub
-gh repo clone ac-willeke/Naturkart uv demo
+gh repo clone naturkart-miljodir/Naturkart uv demo
 cd Naturkart uv demo
 
 # Alternative: using git directly
-git clone https://github.com/ac-willeke/Naturkart uv demo.git
+git clone https://github.com/naturkart-miljodir/Naturkart uv demo.git
 cd Naturkart uv demo
 ```
 
