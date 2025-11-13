@@ -1,0 +1,21 @@
+"""
+{{ project_name }}.
+
+{{ project_description }}
+"""
+from importlib.metadata import version
+
+__version__ = version("{{ distribution_name }}")
+
+
+def main() -> None:
+    """
+    Main entry point for {{ distribution_name }}.
+    
+    Display a welcome message and version information.
+    """
+    print("Hello from {{ distribution_name }}!")
+    print(f"Version: {__version__}")
+
+if __name__ == "__main__":
+    main()
