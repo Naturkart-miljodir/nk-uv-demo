@@ -85,9 +85,16 @@ def main():
             # Clean up template files
             cleanup_template_files(current_dir)
             
-            # Copy generated files
+            # Copy generated files (preserve important directories like .git)
+            protected_dirs = {".git"}
+            
             for item in generated_path.iterdir():
                 dest = current_dir / item.name
+                
+                # Skip if it's a protected directory
+                if dest.name in protected_dirs:
+                    continue
+                    
                 if dest.exists():
                     if dest.is_dir():
                         shutil.rmtree(dest)
