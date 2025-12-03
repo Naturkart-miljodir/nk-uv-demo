@@ -62,9 +62,7 @@ For detailed development container configuration and customization instructiosn,
 | **CD Python** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/cd-python.yml?label=&style=flat) | Package deployment to Test PyPI |
 | **CI Docker** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/ci-docker.yml?branch=main&label=&style=flat) | Build and test Docker image |
 | **CD Docker** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/cd-docker.yml?label=&style=flat) | Container deployment to GitHub Registry |
-| **Security Scan - Safety** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/scan-safety.yml?branch=main&label=&style=flat) | Python dependency vulnerability scanning |
 | **Security Scan - CodeQL** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/scan-codeql.yml?branch=main&label=&style=flat) | Python and GHA security analysis |
-| **Security Scan - Zizmor** | ![Status](https://img.shields.io/github/actions/workflow/status/naturkart-miljodir/nk-uv-demo/scan-zizmor.yml?branch=main&label=&style=flat) | GHA workflow security scan |
 | **Dependabot** |  | Automated dependency updates |
 
 Results of the security scans are visible in the [Security](https://github.com/naturkart-miljodir/nk-uv-demo/security/code-scanning) tab of the GitHub repository.
@@ -195,11 +193,9 @@ The repository includes automated workflows for code quality, security, and depl
 | **CI Python** | `push`, `pull_request` to `main` | Code quality checks, testing, coverage |
 | **CD Python** | `push` to `main` with version tags | Package deployment to Test PyPI |
 | **CD Docker** | `push` to `main` with version tags | Container deployment to GitHub Registry |
-| **Safety Scan** | `push`, `pull_request`, `schedule` | Python dependency vulnerability scanning |
 | **CodeQL Analysis** | `push`, `pull_request`, `schedule` | Code security analysis |
-| **Zizmor Security** | `push`, `pull_request` | GHA workflow security |
 
-The demo workflows can be customized or removed based on your specific project requirements. At minimum, I recommend including the **CI Python** workflow for code quality and testing, as well as the Security workflows: **CodeQL**, **Safety**, and **Zizmor**.
+The demo workflows can be customized or removed based on your specific project requirements. At minimum, I recommend including the **CI Python** workflow for code quality and testing, as well as the Security workflow: **CodeQL**.
 
 ### Local Development Commands
 
