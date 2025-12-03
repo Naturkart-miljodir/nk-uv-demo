@@ -1,6 +1,6 @@
 # Build from published image
 # (improved build time and ensures consistency)
-# NOTE: you must first publish the image to GitHub Container Registry and the update 
+# NOTE: you must first publish the image to GitHub Container Registry and the update
 # the path in the docker-compose.yml file accordingly.
 FROM ghcr.io/naturkart-miljodir/nk_uv_demo:latest
 

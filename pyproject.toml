@@ -65,6 +65,7 @@ addopts = [
 exclude = [
     "dump",
     "tmp",
+    "tests/conftest.py",
 ]
 
 line-length = 88
@@ -88,7 +89,8 @@ ignore = [
     "E501",   # pycodestyle: Line too long
     "F401",   # pyflakes: Module imported but unused
     "D417",   # pydocstyle: Missing argument descriptions in docstrings
-    "ERA001"  # eradicate: Commented out code
+    "ERA001",  # eradicate: Commented out code
+    "D401"    # pydocstyle: First line should be in imperative mood
 ]
 
 unfixable = [

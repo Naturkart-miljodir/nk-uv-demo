@@ -7,9 +7,20 @@ A demo repository showcasing Python project development and packaging best pract
 **Table of Contents:**
 
 - [Project Overview](#project-overview)
+  - [Key Features](#key-features)
+  - [Repository Structure](#repository-structure)
+  - [Docker Configuration](#docker-configuration)
+  - [Workflow Statuses](#workflow-statuses)
 - [Getting Started](#getting-started)
+  - [Installation](#installation)
 - [Development](#development)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
 - [Development Workflow](#development-workflow)
+  - [Code Quality Standards](#code-quality-standards)
+  - [GHA Workflows](#gha-workflows)
+  - [Local Development Commands](#local-development-commands)
+  - [Branch Protection](#branch-protection)
 - [Documentation](#documentation)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
@@ -166,7 +177,7 @@ The following steps configure your development environment using VS Code Dev Con
     - Await review and merge; your branch will be automatically deleted after merging.
 
 4. **Deploy**:
-    - Create a git tag for releases (e.g., `v0.0.1`) using `task tag`.
+    - Create a git tag for releases (e.g., `0.0.1`) using `task tag`.
     - Create a PR from `release/<version>` to `main` to deploy the new release.
     - Once merged to `main`, the CD workflows are triggered:
         - CD Python automatically builds and publishes the package to Test PyPI.
@@ -219,7 +230,7 @@ task security         # Run security scans
 
 # Build and release
 task build            # Build Python package
-task tag              # Prepare a new release (create git tag)
+task tag 0.0.1        # Prepare a new release (create git tag)
 ```
 
 For more commands see: [Command Cheatsheet](./docs/command-cheatsheet.md)
