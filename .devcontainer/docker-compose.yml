@@ -16,8 +16,8 @@ services:
 
     # Environment variables for development
     environment:
-      - PYTHONPATH=/workspaces/nk_uv_demo
-      - UV_PROJECT_ENVIRONMENT=/workspaces/nk_uv_demo/.venv
+    - PYTHONPATH=/workspaces/nk_uv_demo
+    - UV_PROJECT_ENVIRONMENT=/workspaces/nk_uv_demo/.venv
 
     # Optional: expose ports if your application serves HTTP
     # ports:

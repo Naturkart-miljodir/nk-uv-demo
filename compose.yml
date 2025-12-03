@@ -27,9 +27,9 @@ services:
 
     # Optional: environment variables
     environment:
-      - PYTHONPATH=/app
-      - UV_PROJECT_ENVIRONMENT=/app/.venv
-      
+    - PYTHONPATH=/app
+    - UV_PROJECT_ENVIRONMENT=/app/.venv
+
     # Optional: volumes for development
     # volumes:
     #   - .:/app

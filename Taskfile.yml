@@ -129,7 +129,7 @@ tasks:
 
   # Version Management
   tag:
-    desc: "Create and push a new version tag (usage: task tag VERSION=v1.0.0)"
+    desc: "Create and push a new version tag (usage: task tag VERSION=1.0.0)"
     cmds:
       - git tag ${{ .VERSION }}
       - git push origin ${{ .VERSION }}
